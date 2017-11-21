@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Polling</title>
+</head>
+<body>
+    <script>
+        const makeRequest = async() => {
+            try {
+                const res = await fetch("http://localhost:3000/messages");
+                const data = res.json();
+                console.log("New Message", data);
+                makeRequest();
+            }catch(e) {
+                console.error(e);
+                makeRequest();
+            }
+        }
+        makeRequest();
+    </script>
+</body>
+</html>
