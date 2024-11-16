@@ -1,7 +1,7 @@
-String.prototype.firstUppercase = function(str="") {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+String.prototype.firstUppercase = function() {
+    if (this.length === 0) return;
+    return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
-console.log(String.prototype.firstUppercase("raman"));
 const result = "siva";
 console.log(result.firstUppercase());
