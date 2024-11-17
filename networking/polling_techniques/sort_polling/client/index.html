@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort Polling</title>
+  </head>
+  <body>
+    <script>
+      function fetchData() {
+        fetch("http://localhost:3000/api/problems")
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
+      };
+
+      setInterval(() => {
+        fetchData();
+      }, 2000);
+    </script>
+  </body>
+</html>
