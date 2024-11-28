@@ -1,0 +1,2 @@
+Production Build (main.js) ===> 137 kb
+production build using Gzip (main.js) ===> 45 kb
